@@ -1,0 +1,120 @@
+/* Global styles - Theme, font, utilities, animations and global components */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Agro / Livestock palette */
+    /* Background warm off-white #F7F5F0 -> hsl(43 25% 95.5%) */
+    --background: 43 25% 95.5%;
+    --foreground: 0 0% 10%;
+
+    /* Surface white */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Primary: #2D5016 (deep forest green) -> hsl(96 57% 20%) */
+    --primary: 96 57% 20%;
+    --primary-foreground: 43 25% 98%;
+
+    /* Secondary: #8B5E34 (leather brown) -> hsl(29 46% 37%) */
+    --secondary: 29 46% 37%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 18% 90%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 96 35% 92%;
+    --accent-foreground: 96 57% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border warm gray #E5E0D4 -> hsl(42 24% 87%) */
+    --border: 42 24% 87%;
+    --input: 42 24% 87%;
+    --ring: 96 57% 20%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 96 57% 20%;
+    --sidebar-primary-foreground: 43 25% 98%;
+    --sidebar-accent: 96 30% 93%;
+    --sidebar-accent-foreground: 96 57% 20%;
+    --sidebar-border: 42 24% 87%;
+    --sidebar-ring: 96 57% 20%;
+
+    --chart-1: 96 57% 20%;
+    --chart-2: 29 46% 37%;
+    --chart-3: 217 91% 60%;
+    --chart-4: 271 91% 65%;
+    --chart-5: 0 84% 60%;
+  }
+
+  .dark {
+    --background: 120 10% 8%;
+    --foreground: 43 25% 95%;
+
+    --card: 120 8% 12%;
+    --card-foreground: 43 25% 95%;
+
+    --popover: 120 8% 12%;
+    --popover-foreground: 43 25% 95%;
+
+    --primary: 96 50% 45%;
+    --primary-foreground: 120 10% 8%;
+
+    --secondary: 29 40% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 120 8% 18%;
+    --muted-foreground: 40 10% 65%;
+
+    --accent: 120 12% 20%;
+    --accent-foreground: 43 25% 95%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 8% 20%;
+    --input: 120 8% 20%;
+    --ring: 96 50% 45%;
+
+    --sidebar-background: 120 9% 10%;
+    --sidebar-foreground: 43 25% 95%;
+    --sidebar-primary: 96 50% 45%;
+    --sidebar-primary-foreground: 120 10% 8%;
+    --sidebar-accent: 120 12% 18%;
+    --sidebar-accent-foreground: 43 25% 95%;
+    --sidebar-border: 120 8% 18%;
+    --sidebar-ring: 96 50% 45%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  section[aria-label='Notifications alt+T'] {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
